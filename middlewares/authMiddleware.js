@@ -10,7 +10,7 @@ const STATIC_ADMIN_EMAIL = 'admin@ex.com';
 const verifyToken = async (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const emailHeader = req.headers['x-user-email']; // Custom header for user email
-
+console.log(authHeader, emailHeader, " heloo");
   if (!authHeader) {
     console.error("No Authorization header provided");
     return res.status(401).json({ error: 'Access denied. No token provided.' });
